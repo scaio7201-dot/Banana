@@ -1,0 +1,32 @@
+body{
+    background-color: gray;
+}
+h1{
+    color: rgb(14, 0, 213);
+    font-size:  400%;
+    text-align: center
+}
+.p1{
+    color: hsl(23, 100%, 50%);
+    background-color: hsl(0, 100%, 3%);
+    font-family: Arial;
+    font-size: 18px;
+    text-align: left
+}
+.p2{
+    color: hsl(316, 100%, 55%);
+    background-color: hsl(67, 99%, 51%);
+    padding: 10px;
+    font-family: Bold;
+    text-align: left
+}
+#p3{
+    color: hsl(120, 100%, 50%);
+    font-size:  15px;
+    text-align: left
+}
+#p4{
+    color: hsl(180, 100%, 55%);
+    font-size:  15px;
+    text-align: left
+}

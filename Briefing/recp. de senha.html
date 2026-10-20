@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10182d">
+    <title>Recuperar acesso | Acesso Seguro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="auth-card recovery-card" aria-labelledby="page-title">
+            <a class="brand" href="Login.html" aria-label="Acesso Seguro - voltar ao login">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span>Acesso Seguro</span>
+            </a>
+
+            <div class="intro">
+                <p class="eyebrow">RECUPERAÇÃO DE CONTA</p>
+                <h1 id="page-title">Como deseja recuperar o acesso?</h1>
+                <p class="muted">Escolha uma forma de confirmar que a conta é sua.</p>
+            </div>
+
+            <form class="form-stack" data-recovery-form>
+                <fieldset class="method-list">
+                    <legend class="visually-hidden">Forma de recuperação</legend>
+
+                    <label class="method-option">
+                        <input type="radio" name="metodo" value="email" checked>
+                        <span class="method-icon" aria-hidden="true">✉</span>
+                        <span class="method-copy">
+                            <strong>Enviar código por e-mail</strong>
+                            <span>Receba um código no e-mail cadastrado.</span>
+                        </span>
+                        <span class="radio-indicator" aria-hidden="true"></span>
+                    </label>
+                    <div class="method-panel" data-method-panel="email">
+                        <label for="email">E-mail cadastrado</label>
+                        <input id="email" name="email" type="email" autocomplete="email"
+                            placeholder="voce@exemplo.com" required>
+                        <button class="secondary-button" type="submit">Enviar código por e-mail</button>
+                    </div>
+
+                    <label class="method-option">
+                        <input type="radio" name="metodo" value="sms">
+                        <span class="method-icon" aria-hidden="true">▣</span>
+                        <span class="method-copy">
+                            <strong>Enviar código por SMS</strong>
+                            <span>Receba uma mensagem no celular cadastrado.</span>
+                        </span>
+                        <span class="radio-indicator" aria-hidden="true"></span>
+                    </label>
+                    <div class="method-panel" data-method-panel="sms" hidden>
+                        <label for="telefone">Número de celular cadastrado</label>
+                        <input id="telefone" name="telefone" type="tel" autocomplete="tel"
+                            placeholder="(00) 00000-0000" disabled>
+                        <button class="secondary-button" type="submit">Enviar código por SMS</button>
+                    </div>
+
+                    <label class="method-option">
+                        <input type="radio" name="metodo" value="qr">
+                        <span class="method-icon" aria-hidden="true">▦</span>
+                        <span class="method-copy">
+                            <strong>Escanear código pelo celular</strong>
+                            <span>Use o aplicativo da conta para confirmar sua identidade.</span>
+                        </span>
+                        <span class="radio-indicator" aria-hidden="true"></span>
+                    </label>
+                    <div class="method-panel qr-panel" data-method-panel="qr" hidden>
+                        <div class="qr-placeholder" aria-hidden="true">
+                            <span class="qr-corner top-left"></span>
+                            <span class="qr-corner top-right"></span>
+                            <span class="qr-corner bottom-left"></span>
+                            <span class="qr-center">QR</span>
+                        </div>
+                        <p>O código para escaneamento será exibido aqui após a integração com o serviço de autenticação.</p>
+                    </div>
+                </fieldset>
+                <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="card-footer">
+                <span class="muted">Lembrou seus dados?</span>
+                <a href="Login.html">Voltar para o login</a>
+            </div>
+        </section>
+        <p class="security-note"><span aria-hidden="true">●</span> Nunca compartilhe códigos de recuperação com outras pessoas.</p>
+    </main>
+    <script src="interacao.js"></script>
+</body>
+</html>

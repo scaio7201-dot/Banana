@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Media Queries</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 40px;
+        }
+
+        .caixa {
+            background: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+
+        /* 🎯 MEDIA QUERY 1 — TABLET (telas menores que 768px) */
+        @media (max-width: 768px) {
+            body {
+                background: #ffe6e6;
+            }
+            h1 {
+                font-size: 30px;
+                color: #e74c3c;
+            }
+            .caixa {
+                background: #e74c3c;
+            }
+        }
+
+        /* 🎯 MEDIA QUERY 2 — CELULAR (telas menores que 480px) */
+        @media (max-width: 480px) {
+            body {
+                background: #e6f7ff;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+                color: #3498db;
+            }
+            .caixa {
+                background: #3498db;
+                font-size: 14px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Teste de Media Queries</h1>
+
+    <div class="caixa">
+        Redimensione a janela do navegador e veja a mágica acontecer!
+    </div>
+
+    <p>
+        📱 Altere o tamanho da janela para ver as cores mudarem
+    </p>
+</body>
+</html>

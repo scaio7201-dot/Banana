@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10182d">
+    <title>Entrar | Acesso Seguro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="auth-card" aria-labelledby="page-title">
+            <a class="brand" href="Login.html" aria-label="Acesso Seguro - página inicial">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span>Acesso Seguro</span>
+            </a>
+
+            <div class="intro">
+                <p class="eyebrow">BEM-VINDO DE VOLTA</p>
+                <h1 id="page-title">Entre na sua conta</h1>
+                <p class="muted">Informe seus dados para continuar com segurança.</p>
+            </div>
+
+            <form class="form-stack" data-demo-form>
+                <label for="identificador">Usuário ou e-mail</label>
+                <input id="identificador" name="identificador" type="text"
+                    autocomplete="username" placeholder="Seu usuário ou e-mail" required>
+
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password"
+                    autocomplete="current-password" placeholder="Digite sua senha" required>
+
+                <label for="chave">Chave de acesso</label>
+                <input id="chave" name="chave" type="password"
+                    autocomplete="one-time-code" placeholder="Digite sua chave de acesso" required>
+
+                <div class="captcha-box">
+                    <label class="check-label" for="verificacao">
+                        <input id="verificacao" name="verificacao" type="checkbox" required>
+                        <span>Não sou um robô</span>
+                    </label>
+                    <span class="captcha-mark" aria-hidden="true">✓</span>
+                    <span class="captcha-caption">Verificação de demonstração</span>
+                </div>
+
+                <button class="primary-button" type="submit">Entrar</button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="card-footer">
+                <span class="muted">Esqueceu seus dados?</span>
+                <a href="recp.%20de%20senha.html">Recuperar acesso</a>
+            </div>
+        </section>
+        <p class="security-note"><span aria-hidden="true">●</span> Seus dados devem ser protegidos por uma conexão segura.</p>
+    </main>
+    <script src="interacao.js"></script>
+</body>
+</html>

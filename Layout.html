@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout responsivo com CSS Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            color: #1f2937;
+            background: #f3f4f6;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "sidebar"
+                "main"
+                "footer";
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+            max-width: 1100px;
+            min-height: calc(100vh - 48px);
+            margin: 0 auto;
+        }
+
+        .header,
+        .sidebar,
+        .main,
+        .footer {
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .header {
+            grid-area: header;
+            color: #fff;
+            background: #1d4ed8;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            color: #fff;
+            background: #334155;
+        }
+
+        .main {
+            grid-area: main;
+            background: #fff;
+        }
+
+        .footer {
+            grid-area: footer;
+            color: #fff;
+            background: #0f172a;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .layout {
+                grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "footer footer";
+                grid-template-columns: 200px minmax(0, 1fr);
+                grid-template-rows: auto 1fr auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1>Meu site</h1>
+            <p>Um exemplo de layout responsivo feito com CSS Grid.</p>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Menu lateral</h2>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#inicio" style="color: inherit;">Início</a></li>
+                    <li><a href="#sobre" style="color: inherit;">Sobre</a></li>
+                    <li><a href="#contato" style="color: inherit;">Contato</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main" id="inicio">
+            <h2>Conteúdo principal</h2>
+            <p>Esta área apresenta o conteúdo mais importante da página.</p>
+            <p>Em telas pequenas, as áreas aparecem em uma única coluna. Em telas maiores, a sidebar ocupa 200px à esquerda e o conteúdo principal fica à direita.</p>
+        </main>
+
+        <footer class="footer">
+            <p>Rodapé fictício — © 2026 Meu site.</p>
+        </footer>
+    </div>
+</body>
+</html>

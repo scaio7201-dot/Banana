@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Básico - Exemplo Simples</title>
+    
+    <style>
+        /* ========================================
+           EXEMPLO 1: ESTILO DO CORPO (TAG)
+           ======================================== */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* ========================================
+           EXEMPLO 2: ESTILO DE TÍTULO (TAG)
+           ======================================== */
+        h1 {
+            color: #6a1b9a;
+            text-align: center;
+        }
+
+        /* ========================================
+           EXEMPLO 3: ESTILO DE PARÁGRAFO (TAG)
+           ======================================== */
+        p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* ========================================
+           EXEMPLO 4: CLASSE (.destaque)
+           ======================================== */
+        .destaque {
+            color: red;
+            background-color: yellow;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* ========================================
+           EXEMPLO 5: ID (#rodape)
+           ======================================== */
+        #rodape {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* ========================================
+           EXEMPLO 6: HOVER (passar o mouse)
+           ======================================== */
+        .botao {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #8e24aa;
+            transform: scale(1.05);
+        }
+
+        /* ========================================
+           EXEMPLO 7: LISTA ESTILIZADA
+           ======================================== */
+        .lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista li {
+            background: #f3e5f5;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 4px solid #6a1b9a;
+        }
+
+        .lista li:hover {
+            background: #e1bee7;
+            padding-left: 25px;
+        }
+
+        /* ========================================
+           EXEMPLO 8: TABELA SIMPLES
+           ======================================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background: #6a1b9a;
+            color: white;
+            padding: 10px;
+        }
+
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        table tr:hover {
+            background: #f3e5f5;
+        }
+
+        /* ========================================
+           EXEMPLO 9: BOX COM BORDA
+           ======================================== */
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        /* ========================================
+           EXEMPLO 10: CORES EM CSS
+           ======================================== */
+        .cor-roxo {
+            background: #6a1b9a;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cor-azul {
+            background: #1565c0;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cor-verde {
+            background: #2e7d32;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         CONTEÚDO HTML
+         ============================================ -->
+
+    <!-- EXEMPLO 1 e 2: TÍTULO -->
+    <h1>🎨 CSS Básico - Exemplos</h1>
+
+    <!-- EXEMPLO 3: PARÁGRAFO -->
+    <p>Este é um parágrafo normal estilizado com CSS.</p>
+
+    <!-- EXEMPLO 4: CLASSE .destaque -->
+    <p>
+        <span class="destaque">🔴 Este texto está em destaque</span> 
+        (usando classe .destaque)
+    </p>
+
+    <!-- EXEMPLO 5: ID #rodape -->
+    <div id="rodape">
+        <p style="color: white; margin: 0;">Rodapé estilizado com ID #rodape</p>
+    </div>
+
+    <!-- EXEMPLO 6: BOTÃO COM HOVER -->
+    <div class="box">
+        <h3>📌 Botão com :hover</h3>
+        <button class="botao">Passe o mouse aqui</button>
+        <p><small>Efeito ao passar o mouse (hover)</small></p>
+    </div>
+
+    <!-- EXEMPLO 7: LISTA -->
+    <div class="box">
+        <h3>📌 Lista Estilizada</h3>
+        <ul class="lista">
+            <li>HTML - Estrutura</li>
+            <li>CSS - Estilo</li>
+            <li>JavaScript - Interação</li>
+        </ul>
+        <p><small>Passe o mouse nos itens</small></p>
+    </div>
+
+    <!-- EXEMPLO 8: TABELA -->
+    <div class="box">
+        <h3>📌 Tabela Estilizada</h3>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+                <td>São Paulo</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>22</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>28</td>
+                <td>Belo Horizonte</td>
+            </tr>
+        </table>
+        <p><small>Linhas alternadas e efeito hover</small></p>
+    </div>
+
+    <!-- EXEMPLO 9: BOX COM SOMBRA -->
+    <div class="box">
+        <h3>📌 Box com Sombra</h3>
+        <p>Este box usa <strong>box-shadow</strong> e <strong>border-radius</strong></p>
+        <p><small>Propriedades: box-shadow, border-radius, padding</small></p>
+    </div>
+
+    <!-- EXEMPLO 10: CORES -->
+    <div class="box">
+        <h3>🎨 Cores em CSS</h3>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <div class="cor-roxo">Roxo</div>
+            <div class="cor-azul">Azul</div>
+            <div class="cor-verde">Verde</div>
+        </div>
+        <p><small>Cores definidas com classes diferentes</small></p>
+    </div>
+
+    <hr>
+
+    <!-- RESUMO FINAL -->
+    <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #6a1b9a; border-radius: 5px;">
+        <h3>📊 Resumo do que vimos:</h3>
+        <ul>
+            <li><b>Tag</b> → <span class="tag-html">body, h1, p</span></li>
+            <li><b>Classe</b> → <span class="tag-html">.destaque</span></li>
+            <li><b>ID</b> → <span class="tag-html">#rodape</span></li>
+            <li><b>Hover</b> → <span class="tag-html">:hover</span></li>
+            <li><b>Lista</b> → <span class="tag-html">ul, li</span></li>
+            <li><b>Tabela</b> → <span class="tag-html">table, tr, th, td</span></li>
+            <li><b>Box</b> → <span class="tag-html">box-shadow, border-radius</span></li>
+            <li><b>Cores</b> → <span class="tag-html">background-color, color</span></li>
+        </ul>
+    </div>
+
+</body>
+</html>

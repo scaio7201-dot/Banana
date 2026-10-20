@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .countainer1 {
+        background-color: lightgray;
+        border-radius: 10px;
+        height: 100px;
+    }
+    #column1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        transition:all 0.5s;
+}
+#column1:hover {
+    transform: scale(1.1);
+}
+.sidebar {
+    background-color:Darkblue;
+    color: black;
+    width: 50%;
+    height: 100px;
+    border-radius: 10px;
+}
+#column2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    transition:all 0.5s;
+}
+#column2:hover {
+    transform: scale(1.1);
+}
+.countainer2 {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+#column3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    transition:all 0.5s;
+}
+#column3:hover {
+    transform: scale(1.1);
+}
+.footer {
+    background-color:Darkblue;
+    border-radius: 10px;
+}
+#column4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    transition:all 0.5s;
+}
+#column4:hover {
+    transform: scale(1.1);
+}
+</style>
+<body>
+    <header class="countainer1">
+        <h1 id="column1">Grid</h1>
+    </header>
+    <sidebar class="sidebar">
+        <h2 id="column2">Sidebar</h2>
+    </sidebar>
+    <main class="countainer2">
+        <h3 id="column3">Main</h3>
+    </main>
+    <footer class="footer">
+        <h4 id="column4">Footer</h4>
+    </footer>
+    
+</body>
+</html>

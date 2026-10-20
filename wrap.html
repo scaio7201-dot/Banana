@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        background-color: lightgray;
+        gap: 10px;
+        width: 80%;
+    }
+    .item{
+        width: 80%;
+        height: 15px;
+        background-color: blueviolet;
+    }
+    .item:nth-child(8n){}
+    /*
+    =============================
+
+    =============================
+    */
+    .countainer2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        gap: 10px;
+        width: 80%;
+    }
+    .item2{
+        width: 80%;
+        height: 15px;
+        background-color: lightblue;
+    }
+    .item2:nth-child(8n){
+    }
+ </style>
+ <body>
+    <div class="container"> Countainer sem wrap</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        
+    <div class="countainer2"> Countainer com wrap</div>
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+</body>
+</html>
